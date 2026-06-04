@@ -1,0 +1,13 @@
+{
+  "best_params": {
+    "learning_rate": 0.05989386541052094,
+    "depth": 8,
+    "l2_leaf_reg": 40,
+    "min_data_in_leaf": 33,
+    "subsample": 0.7304453570550351,
+    "rsm": 0.807817107441904,
+    "random_strength": 4.992838121387593,
+    "bagging_temperature": 0.7325024418362588
+  },
+  "best_value": 515.2149357555071
+}

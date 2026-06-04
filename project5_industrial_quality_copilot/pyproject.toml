@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-quality-copilot"
+version = "1.0.0"
+description = "End-to-end industrial product surface defect detection Copilot system"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Manufacturing",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+[project.scripts]
+quality-copilot = "src.main:app"
+quality-copilot-ui = "src.ui.gradio_app:main"
+quality-train = "scripts.run_training:main"
+quality-eda = "scripts.run_eda:main"
+quality-predict = "scripts.batch_predict:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+ignore = ["E501"]

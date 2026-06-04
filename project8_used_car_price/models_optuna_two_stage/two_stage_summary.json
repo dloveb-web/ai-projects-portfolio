@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "learning_rate": 0.05989386541052094,
+    "depth": 8,
+    "l2_leaf_reg": 40,
+    "min_data_in_leaf": 33,
+    "subsample": 0.7304453570550351,
+    "rsm": 0.807817107441904,
+    "random_strength": 4.992838121387593,
+    "bagging_temperature": 0.7325024418362588
+  },
+  "fine_best_params": {
+    "learning_rate": 0.06460857891605165,
+    "depth": 8,
+    "l2_leaf_reg": 72,
+    "min_data_in_leaf": 43,
+    "subsample": 0.8846186517754219,
+    "rsm": 0.9390702958567834,
+    "random_strength": 3.5059305882385545,
+    "bagging_temperature": 0.7267725956866965
+  },
+  "fine_cv_mae": 504.98853009573617,
+  "val_mae": 495.653574853705,
+  "val_rmse": 1097.1860538836563,
+  "val_r2": 0.9725765623919658
+}

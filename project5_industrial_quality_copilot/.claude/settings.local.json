@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/bin/ls -la)",
+      "Bash(xattr *)",
+      "Bash(/bin/ls *)",
+      "Bash(osascript *)",
+      "Bash(mdfind -onlyin /tmp 'kMDItemFSName == \"*quality_copilot*\"')",
+      "Bash(mdfind -onlyin /tmp 'kMDItemFSName == \"*project5*\"')",
+      "Bash(python -m pytest tests/ -v --tb=short)",
+      "Bash(./venv/bin/python -m pytest tests/ -v --tb=short)",
+      "Bash(./venv/bin/pip install *)",
+      "Bash(python3 -m venv /tmp/test_venv)",
+      "Bash(/tmp/test_venv/bin/pip install *)",
+      "Bash(/tmp/test_venv/bin/python -m pytest tests/ -v --tb=short)",
+      "Bash(/tmp/test_venv/bin/python -m pytest tests/test_core.py tests/test_detector.py -v --tb=short)",
+      "Bash(/tmp/test_venv/bin/python -c ' *)",
+      "Bash(/tmp/test_venv)",
+      "Bash(python3 -m venv /tmp/test_venv3)"
+    ]
+  }
+}

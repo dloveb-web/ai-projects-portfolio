@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "北京是中国的首都吗？",
+    "category": "常识问答",
+    "expected_keywords": ["是", "首都"]
+  },
+  {
+    "id": 2,
+    "question": "水的沸点是多少摄氏度？",
+    "category": "常识问答",
+    "expected_keywords": ["100", "度", "沸点"]
+  },
+  {
+    "id": 3,
+    "question": "太阳从哪个方向升起？",
+    "category": "常识问答",
+    "expected_keywords": ["东", "东方"]
+  },
+  {
+    "id": 4,
+    "question": "请写一首关于春天的诗",
+    "category": "文本生成",
+    "expected_keywords": ["春", "花", "风", "绿"]
+  },
+  {
+    "id": 5,
+    "question": "如果A大于B，B大于C，那么A和C的关系是什么？",
+    "category": "逻辑推理",
+    "expected_keywords": ["A大于C", "大于", "传递"]
+  },
+  {
+    "id": 6,
+    "question": "所有的鸟都会飞吗？请解释",
+    "category": "逻辑推理",
+    "expected_keywords": ["不是", "企鹅", "鸵鸟", "例外"]
+  },
+  {
+    "id": 7,
+    "question": "请解释什么是人工智能",
+    "category": "常识问答",
+    "expected_keywords": ["人工", "智能", "机器", "模仿"]
+  },
+  {
+    "id": 8,
+    "question": "写一段描述日落的文字",
+    "category": "文本生成",
+    "expected_keywords": ["夕阳", "晚霞", "天空", "余晖"]
+  },
+  {
+    "id": 9,
+    "question": "如果今天星期一，后天是星期几？",
+    "category": "逻辑推理",
+    "expected_keywords": ["星期三", "三"]
+  },
+  {
+    "id": 10,
+    "question": "冰箱里的水会结冰吗？为什么？",
+    "category": "常识问答",
+    "expected_keywords": ["不一定", "温度", "不一定能"]
+  },
+  {
+    "id": 11,
+    "question": "解释什么是大数据",
+    "category": "常识问答",
+    "expected_keywords": ["数据", "海量", "处理", "分析"]
+  },
+  {
+    "id": 12,
+    "question": "如果1+1=2，那么2+2等于多少？",
+    "category": "逻辑推理",
+    "expected_keywords": ["4", "四"]
+  },
+  {
+    "id": 13,
+    "question": "请介绍一下中国的四大发明",
+    "category": "常识问答",
+    "expected_keywords": ["造纸术", "印刷术", "指南针", "火药"]
+  },
+  {
+    "id": 14,
+    "question": "写一个关于友情的故事开头",
+    "category": "文本生成",
+    "expected_keywords": ["朋友", "友谊", "童年"]
+  },
+  {
+    "id": 15,
+    "question": "什么是互联网？它是如何工作的？",
+    "category": "常识问答",
+    "expected_keywords": ["网络", "连接", "信息", "协议"]
+  }
+]

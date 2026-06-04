@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "question": "劳动合同可以口头约定吗？",
+    "category": "法律",
+    "expected_keywords": ["书面", "形式", "规定", "应当"]
+  },
+  {
+    "id": 2,
+    "question": "劳动仲裁的时效是多久？",
+    "category": "法律",
+    "expected_keywords": ["一年", "时效", "仲裁"]
+  },
+  {
+    "id": 3,
+    "question": "试用期的最长期限是多久？",
+    "category": "法律",
+    "expected_keywords": ["六个月", "试用期", "法律"]
+  },
+  {
+    "id": 4,
+    "question": "公司可以随意辞退员工吗？",
+    "category": "法律",
+    "expected_keywords": ["不可以", "法定", "理由", "补偿"]
+  },
+  {
+    "id": 5,
+    "question": "加班费如何计算？",
+    "category": "法律",
+    "expected_keywords": ["150%", "200%", "300%", "加班"]
+  },
+  {
+    "id": 6,
+    "question": "感冒了应该怎么办？",
+    "category": "医疗",
+    "expected_keywords": ["休息", "多喝水", "就医", "对症"]
+  },
+  {
+    "id": 7,
+    "question": "高血压患者饮食应注意什么？",
+    "category": "医疗",
+    "expected_keywords": ["低盐", "低脂", "饮食", "控制"]
+  },
+  {
+    "id": 8,
+    "question": "糖尿病患者可以吃水果吗？",
+    "category": "医疗",
+    "expected_keywords": ["可以", "适量", "选择", "低糖"]
+  },
+  {
+    "id": 9,
+    "question": "如何预防流感？",
+    "category": "医疗",
+    "expected_keywords": ["疫苗", "洗手", "通风", "增强"]
+  },
+  {
+    "id": 10,
+    "question": "什么是股票的市盈率？",
+    "category": "金融",
+    "expected_keywords": ["市盈率", "股价", "盈利", "比率"]
+  },
+  {
+    "id": 11,
+    "question": "如何分散投资风险？",
+    "category": "金融",
+    "expected_keywords": ["分散", "配置", "不同", "资产"]
+  },
+  {
+    "id": 12,
+    "question": "什么是通货膨胀？",
+    "category": "金融",
+    "expected_keywords": ["物价", "上涨", "货币", "购买力"]
+  },
+  {
+    "id": 13,
+    "question": "劳动合同的必备条款有哪些？",
+    "category": "法律",
+    "expected_keywords": ["用人单位", "劳动者", "合同期限", "工作内容"]
+  },
+  {
+    "id": 14,
+    "question": "年假应该怎么休？",
+    "category": "法律",
+    "expected_keywords": ["工作年限", "安排", "应当", "年休假"]
+  },
+  {
+    "id": 15,
+    "question": "胃痛应该如何缓解？",
+    "category": "医疗",
+    "expected_keywords": ["热敷", "清淡", "就医", "避免"]
+  }
+]

@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Data (mounted at runtime)
+data/uploads/*
+data/reports/*
+data/chroma_db/*
+data/*.db
+data/*.sqlite
+!data/.gitkeep
+
+# Models (mounted at runtime)
+models/**/*.pt
+models/**/*.pth
+
+# Version control
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+.gradio/
+.claude/

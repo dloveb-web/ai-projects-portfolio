@@ -1,0 +1,26 @@
+<annotation>
+	<folder>IMAGES</folder>
+	<filename>1.jpg</filename>
+	<path>C:\Users\cheny\Desktop\企业内训\上汽大众\2023规划\L3（新）\Case-钢铁表面缺陷检测\train\IMAGES\1.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>200</width>
+		<height>200</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bug</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>144</xmin>
+			<ymin>90</ymin>
+			<xmax>186</xmax>
+			<ymax>142</ymax>
+		</bndbox>
+	</object>
+</annotation>

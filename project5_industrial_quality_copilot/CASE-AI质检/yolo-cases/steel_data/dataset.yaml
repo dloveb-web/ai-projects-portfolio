@@ -1,0 +1,14 @@
+path: /root/autodl-tmp/vl_model_cases/yolo-cases/steel_data  # 数据集根目录
+train: train/train.txt  # 训练图像路径
+val: train/val.txt     # 验证/测试图像路径
+test:  train/test.txt   # 测试图像路径（可选）
+
+
+# 类别名称
+names:
+  0: crazing
+  1: inclusion
+  2: pitted_surface
+  3: scratches
+  4: patches
+  5: rolled-in_scale

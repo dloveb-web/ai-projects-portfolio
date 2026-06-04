@@ -1,0 +1,101 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/api.Dockerfile
+    container_name: inference-api
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    environment:
+      - MODEL_PATH=${MODEL_PATH:-/models/Qwen2.5-7B-Instruct}
+      - VLLM_HOST=vllm
+      - VLLM_PORT=8000
+      - LANGFUSE_PUBLIC_KEY=${LANGFUSE_PUBLIC_KEY}
+      - LANGFUSE_SECRET_KEY=${LANGFUSE_SECRET_KEY}
+      - LANGFUSE_HOST=${LANGFUSE_HOST}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../src:/app/src
+      - model_cache:/models
+    depends_on:
+      vllm:
+        condition: service_healthy
+      prometheus:
+        condition: service_started
+      grafana:
+        condition: service_started
+    networks:
+      - inference-network
+    restart: unless-stopped
+
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: vllm-engine
+    environment:
+      - MODEL=${MODEL_PATH:-Qwen/Qwen2.5-7B-Instruct}
+      - VLLM_GPU_MEMORY_UTILIZATION=${VLLM_GPU_MEMORY_UTILIZATION:-0.9}
+      - VLLM_MAX_MODEL_LEN=${VLLM_MAX_MODEL_LEN:-8192}
+      - PORT=8000
+    volumes:
+      - model_cache:/root/.cache/huggingface/hub
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - inference-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/v1/models"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - inference-network
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin123}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ../grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ../grafana/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
+    networks:
+      - inference-network
+    restart: unless-stopped
+
+volumes:
+  model_cache:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  inference-network:
+    driver: bridge

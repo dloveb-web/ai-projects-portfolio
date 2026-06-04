@@ -1,0 +1,19 @@
+# PCBA AI Demo — Python Dependencies
+# M5 Mac · ARM64 · MPS backend
+
+torch>=2.6.0
+torchvision>=0.21.0
+ultralytics>=8.3.0
+onnx>=1.16.0
+onnxruntime>=1.19.0
+coremltools>=8.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+streamlit>=1.40.0
+pillow>=11.0
+numpy>=2.2.0
+opencv-python>=4.10.0
+scikit-learn>=1.5.0
+matplotlib>=3.9.0
+pandas>=2.2.0
+python-multipart>=0.0.9

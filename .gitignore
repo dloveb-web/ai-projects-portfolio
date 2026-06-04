@@ -1,0 +1,56 @@
+# .gitignore
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+**/venv/
+env/
+**/env/
+*.log
+*.sqlite3
+*.db
+.DS_Store
+node_modules/
+dist/
+build/
+.idea/
+.vscode/
+*.ipynb_checkpoints/
+models/
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+data/raw/
+**/data/raw/
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Python virtual environments (project-specific)
+car_price_env/
+*_env/
+**/car_price_env/
+**/*_env/
+
+# Large binary / compiled files
+*.dylib
+*.so
+*.abi3.so
+*.cbm
+*.xgb
+*.lgbm
+
+# Large data / model output files
+*.csv
+*.parquet
+*.feather
+*.joblib
+*.pkl
+temp/
+**/temp/
+processed_data/
+**/processed_data/

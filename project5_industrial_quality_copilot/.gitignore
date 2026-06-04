@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data files
+*.db
+*.sqlite
+data/uploads/*
+data/reports/*
+data/chroma_db/*
+!data/.gitkeep
+
+# Models
+models/yolov11/*.pt
+models/yolov11/*.pth
+models/qwen_vl/*
+
+# Logs
+*.log
+logs/
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/*.pid

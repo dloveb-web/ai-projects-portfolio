@@ -1,0 +1,17 @@
+# PCBA 缺陷检测数据集配置
+path: /Users/wildon/Desktop/PCBA_AI_Demo/data/processed
+train: images/train
+val: images/val
+test: images/test
+
+# 类别定义
+names:
+  0: missing_hole
+  1: mouse_bite
+  2: open_circuit
+  3: short
+  4: spur
+  5: spurious_copper
+
+# 类别数量
+nc: 6
